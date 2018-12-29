@@ -23,18 +23,17 @@ public class CommentService {
 
     }
 
-    public List<Comment> getAllImageComments(Image imageid){
-
-
-        return commentRepository.getComments_of_Image(imageid);
-
+    public List<Comment> getImageComments(Integer imageId) {
+        List<Comment> results = commentRepository.getImageComments(imageId);
+        return results;
     }
-    public void createComment (Comment newComment){
+
+
+
+    public Comment createComment (Comment newComment){
         newComment.setCreatedDate(new Date());
-        commentRepository.createComment(newComment);
-        System.out.println("Comments"+newComment);
+        return commentRepository.createComment(newComment);
+
     }
-    public Comment getComment(Integer Id) {
-        return commentRepository.getComment(Id);
-    }
+
 }

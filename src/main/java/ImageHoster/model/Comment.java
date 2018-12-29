@@ -2,6 +2,7 @@ package ImageHoster.model;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 //@Entity annotation specifies that the corresponding class is a JPA entity
 @Entity
@@ -31,6 +32,8 @@ public class Comment {
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "image_id")
     private Image image;
+
+
 
     public Integer getId() {
         return id;

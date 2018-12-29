@@ -26,10 +26,16 @@ public class ImageService {
     }
 
 
+    //The method calls the getImageById() method in the Repository and passes the id of the image to be fetched
+    public Image getImageById(Integer id) {
+        return imageRepository.getImage(id);
+    }
+
     //The method calls the getImageByTitle() method in the Repository and passes the title of the image to be fetched
     public Image getImageByTitle(String title) {
         return imageRepository.getImageByTitle(title);
     }
+
 
     //The method calls the getImage() method in the Repository and passes the id of the image to be fetched
     public Image getImage(Integer imageId) {

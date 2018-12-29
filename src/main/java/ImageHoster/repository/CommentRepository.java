@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Repository
@@ -19,32 +20,16 @@ public class CommentRepository {
 
     public List<Comment> getAllComments() {
         EntityManager em = emf.createEntityManager();
-        TypedQuery<Comment> query = em.createQuery("SELECT c from Comment c", Comment.class);
-        List<Comment> resultList = query.getResultList();
-
-        return resultList;
-    }
-
-
-    public List<Comment> getComments_of_Image(Image imageid) {
-        EntityManager em = emf.createEntityManager();
         try {
-            TypedQuery<Comment> query = em.createQuery("SELECT c from Comment C where c.image_id =:imageid", Comment.class);
-            query.setParameter("imageid", imageid);
-            List<Comment> resultList = query.getResultList();
-            return resultList;
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            em.close();
+            TypedQuery<Comment> query = em.createQuery("SELECT c from Comment c", Comment.class);
+            List<Comment> comments = query.getResultList();
+            return comments;
         }
-        return null;
+        catch (NoResultException nre) {
+            return null;
+        }
+
     }
-
-
-
-
-
 
     public Comment createComment(Comment newComment){
         EntityManager em = emf.createEntityManager();
@@ -60,13 +45,24 @@ public class CommentRepository {
         return  newComment;
     }
 
+    public List<Comment> getImageComments(Integer imageId) {
 
-    public Comment getComment(Integer commentId) {
         EntityManager em = emf.createEntityManager();
-        TypedQuery<Comment> typedQuery = em.createQuery("SELECT i from Comment i where i.id =:commentId", Comment.class).setParameter("commentId", commentId);
-        Comment comment = typedQuery.getSingleResult();
-        return comment;
+        EntityTransaction transaction = em.getTransaction();
+        try {
+            TypedQuery<Comment> query = em.createQuery("SELECT i from Comment i", Comment.class);
+            List<Comment> resultList = query.getResultList();
+            List<Comment> returnList = new ArrayList<Comment>();
+            for(Comment comment : resultList){
+                if(comment.getImage().getId() == imageId){
+                    returnList.add(comment);
+                }
+            }
+            return returnList;
+        } catch (NoResultException nre) {
+            return null;
+        }
+    }
     }
 
 
-}

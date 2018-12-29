@@ -3,7 +3,6 @@ package ImageHoster.controller;
 import ImageHoster.model.Image;
 import ImageHoster.model.User;
 import ImageHoster.model.UserProfile;
-import ImageHoster.service.CommentService;
 import ImageHoster.service.ImageService;
 import ImageHoster.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,9 +24,6 @@ public class UserController {
     @Autowired
     private ImageService imageService;
 
-    @Autowired
-    private CommentService commentService;
-
     //This controller method is called when the request pattern is of type 'users/registration'
     //This method declares User type and UserProfile type object
     //Sets the user profile with UserProfile type object
@@ -45,22 +41,35 @@ public class UserController {
     //This method calls the business logic and after the user record is persisted in the database, directs to login page
     @RequestMapping(value = "users/registration", method = RequestMethod.POST)
     public String registerUser(User user,Model model) {
-        userService.registerUser(user);
-        //User user = (User) session.getAttribute("loggeduser");
-
-       // model.addAttribute("image", image);
-        //model.addAttribute("tags", tags);
-        model.addAttribute("User", user);
-        boolean passwordStrength =  userService.checkPasswordStrength(user);
-
-        if(passwordStrength){
-
+        //call the method checkPassword(user) and check if it returns true or false
+        boolean checkUserPassword = checkPassword(user);
+        String error = "Password must contain at least 1 alphabet, 1 number & 1 special character";
+        //if the checkUserPassword is true then  return "redirect:/users/login" and register the user
+        //if it is false then add the model attribute User and passwordTypeError and return users/registration.html
+        if(checkUserPassword){
+            userService.registerUser(user);
             return "redirect:/users/login";
         }
         else{
-            String error = "Password must contain at least 1 alphabet, 1 number & 1 special character";
-            model.addAttribute("passwordTypeError", error);
-           return "users/registration.html";
+            model.addAttribute("User", user);
+            model.addAttribute("passwordTypeError",error);
+            return "users/registration.html";
+        }
+
+
+
+    }
+// this method is used to check if the password string has atleast 1 alphabet and 1 number and  any 1 special character
+         boolean checkPassword(User user){
+
+        String password =user.getPassword();
+
+        if( (password.matches("(?=.*[a-z]).*") || password.matches("(?=.*[A-Z]).*")) && password.matches("(?=.*[0-9]).*") && password.matches("(?=.*[~!@#$%^&*()_-]).*") ){
+            return true;
+        }
+
+        else{
+            return false;
         }
 
     }
@@ -76,14 +85,12 @@ public class UserController {
     //If user with entered username and password exists in the database, add the logged in user in the Http Session and direct to user homepage displaying all the images in the application
     //If user with entered username and password does not exist in the database, redirect to the same login page
     @RequestMapping(value = "users/login", method = RequestMethod.POST)
-    public String loginUser(User user, HttpSession session,Model model) {
+    public String loginUser(User user, HttpSession session) {
         User existingUser = userService.login(user);
         if (existingUser != null) {
             session.setAttribute("loggeduser", existingUser);
             return "redirect:/images";
         } else {
-            String passwordError = "Only the owner of the image can delete the image";
-            model.addAttribute("passwordTypeError", passwordError);
             return "users/login";
         }
     }

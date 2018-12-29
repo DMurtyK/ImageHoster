@@ -16,17 +16,6 @@ public class UserService {
         userRepository.registerUser(newUser);
     }
 
-    public boolean checkPasswordStrength(User user){
-        String password = user.getPassword();
-        if( password.matches("(?=.*[0-9]).*")&&( password.matches("(?=.*[a-z]).*")|| password.matches("(?=.*[A-Z]).*"))&& password.matches("(?=.*[~!@#$%^&*()_-]).*")){
-            return true;
-        }
-        else{
-            return false;
-        }
-
-    }
-
     //Since we did not have any user in the database, therefore the user with username 'upgrad' and password 'password' was hard-coded
     //This method returned true if the username was 'upgrad' and password is 'password'
     //But now let us change the implementation of this method
