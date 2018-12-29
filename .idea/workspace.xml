@@ -1,58 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c332855e-1472-4d27-ab03-26b600a6ba8c" name="Default Changelist" comment="The final Image hoster assignment with solution">
-      <change afterPath="$APPLICATION_CONFIG_DIR$/options/github_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ImageHoster.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/ImageHoster/ImageHosterApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/ImageHoster/config/JpaConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/ImageHoster/controller/CommentController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/ImageHoster/controller/HomeController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/ImageHoster/controller/ImageController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/ImageHoster/controller/UserController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/ImageHoster/model/Comment.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/ImageHoster/model/Image.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/ImageHoster/model/Tag.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/ImageHoster/model/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/ImageHoster/model/UserProfile.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/ImageHoster/repository/CommentRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/ImageHoster/repository/ImageRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/ImageHoster/repository/TagRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/ImageHoster/repository/UserRepository.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/ImageHoster/service/CommentService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/ImageHoster/service/ImageService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/ImageHoster/service/TagService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/ImageHoster/service/UserService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/css/tachyons.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/images.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/images/edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/images/image.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/images/upload.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/layout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/users/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/templates/users/registration.html" afterDir="false" />
-      <change afterPath="$USER_HOME$/ImageHoster_assignment_solution/.idea/ImageHoster_assignment_solution.iml" afterDir="false" />
-      <change afterPath="$USER_HOME$/ImageHoster_assignment_solution/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$USER_HOME$/ImageHoster_assignment_solution/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$USER_HOME$/ImageHoster_assignment_solution/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$USER_HOME$/ImageHoster_assignment_solution/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$USER_HOME$/ImageHoster_assignment_solution/ImageHoster/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$USER_HOME$/ImageHoster_assignment_solution/ImageHoster/ImageHoster.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ImageHoster/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ImageHoster/controller/CommentController.java" afterDir="false" />
+    <list default="true" id="c332855e-1472-4d27-ab03-26b600a6ba8c" name="Default Changelist" comment="commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ImageHoster/controller/ImageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ImageHoster/controller/ImageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ImageHoster/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ImageHoster/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ImageHoster/model/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ImageHoster/model/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ImageHoster/model/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ImageHoster/model/Image.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ImageHoster/repository/CommentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ImageHoster/repository/CommentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ImageHoster/repository/ImageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ImageHoster/repository/ImageRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ImageHoster/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ImageHoster/service/CommentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ImageHoster/service/ImageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ImageHoster/service/ImageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ImageHoster/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ImageHoster/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$USER_HOME$/TechnicalBlog/.idea/workspace.xml" beforeDir="false" afterPath="$USER_HOME$/TechnicalBlog/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ImageHoster/controller/ImageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ImageHoster/controller/ImageController.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -466,35 +418,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ImageController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ImageController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ImageHoster/controller/ImageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
-              <caret line="218" column="39" selection-start-line="218" selection-start-column="39" selection-end-line="218" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CommentController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ImageHoster/controller/CommentController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="41" selection-start-line="41" selection-end-line="41" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CommentService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ImageHoster/service/CommentService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="18" column="41" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="41" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="124">
+              <caret line="136" lean-forward="true" selection-start-line="136" selection-end-line="136" />
             </state>
           </provider>
         </entry>
@@ -512,7 +440,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Comment.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Comment.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ImageHoster/model/Comment.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="147">
@@ -520,31 +448,6 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Image.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ImageHoster/model/Image.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3782#3783#0" expanded="true" />
-                <element signature="e#3813#3814#0" expanded="true" />
-                <element signature="e#3868#3869#0" expanded="true" />
-                <element signature="e#3908#3909#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="image.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/images/image.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="439">
-              <caret line="72" column="85" selection-start-line="72" selection-start-column="77" selection-end-line="72" selection-end-column="85" />
             </state>
           </provider>
         </entry>
@@ -617,10 +520,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/images/edit.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/tachyons.min.css" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/layout.html" />
-        <option value="$PROJECT_DIR$/src/test/java/ImageHoster/controller/HomeControllerTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/ImageHoster/controller/ImageControllerTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/ImageHoster/controller/UserControllerTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/ImageHoster/controller/CommentControllerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/ImageHoster/config/JpaConfig.java" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/main/java/ImageHoster/repository/ImageRepository.java" />
@@ -634,6 +533,10 @@
         <option value="$PROJECT_DIR$/src/main/java/ImageHoster/controller/CommentController.java" />
         <option value="$PROJECT_DIR$/src/main/java/ImageHoster/model/Image.java" />
         <option value="$PROJECT_DIR$/src/main/java/ImageHoster/repository/CommentRepository.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ImageHoster/controller/CommentControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ImageHoster/controller/HomeControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ImageHoster/controller/ImageControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ImageHoster/controller/UserControllerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/ImageHoster/controller/ImageController.java" />
       </list>
     </option>
@@ -654,7 +557,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1382" />
@@ -799,6 +702,27 @@
             <path>
               <item name="ImageHoster" type="b2602c69:ProjectViewProjectNode" />
               <item name="ImageHoster" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ImageHoster" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ImageHoster" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ImageHoster" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ImageHoster" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ImageHoster" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ImageHoster" type="462c0819:PsiDirectoryNode" />
               <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -877,13 +801,21 @@
       <workItem from="1541430847431" duration="899000" />
       <workItem from="1541482181542" duration="4602000" />
     </task>
+    <task id="LOCAL-00001" summary="bug fix for Imagecontroller.java for the edit hyperlink for owner user image.">
+      <created>1546082368852</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1546082368852</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="169971000" />
+    <option name="totallyTimeSpent" value="174321000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="9" />
@@ -904,11 +836,11 @@
       <window_info anchor="bottom" id="Java Enterprise" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="bottom" id="Version Control" order="2" weight="0.32838285" />
-      <window_info active="true" anchor="bottom" id="Run" order="9" sideWeight="0.49924356" visible="true" weight="0.339934" />
+      <window_info anchor="bottom" id="Run" order="9" sideWeight="0.49924356" visible="true" weight="0.22442244" />
       <window_info anchor="bottom" id="Spring" order="6" />
       <window_info anchor="bottom" id="Terminal" order="0" />
       <window_info id="Persistence" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.4978261" visible="true" weight="0.22768533" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" sideWeight="0.4978261" visible="true" weight="0.22768533" />
       <window_info anchor="right" id="Bean Validation" order="16" weight="0.32980332" />
       <window_info id="Web" order="4" sideWeight="0.5021739" side_tool="true" weight="0.20045386" />
       <window_info anchor="right" id="Theme Preview" order="7" />
@@ -991,7 +923,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="The final Image hoster assignment with solution" />
-    <option name="LAST_COMMIT_MESSAGE" value="The final Image hoster assignment with solution" />
+    <MESSAGE value="bug fix for Imagecontroller.java for the edit hyperlink for owner user image." />
+    <MESSAGE value="bug fix for Imagecontroller.java for edit hyperlink where the tags are added to the model" />
+    <MESSAGE value="bug fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug fix" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -1197,34 +1132,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ImageHoster/controller/HomeControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="36" column="5" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ImageHoster/controller/ImageControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2116">
-          <caret line="305" column="9" lean-forward="true" selection-start-line="305" selection-start-column="9" selection-end-line="305" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ImageHoster/controller/UserControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="161" column="31" selection-start-line="161" selection-start-column="31" selection-end-line="161" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ImageHoster/controller/CommentControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="59" column="53" lean-forward="true" selection-start-line="59" selection-start-column="53" selection-end-line="59" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ImageHoster/config/JpaConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -1328,13 +1235,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ImageHoster/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="66" column="8" selection-start-line="66" selection-start-column="8" selection-end-line="66" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ImageHoster/repository/CommentRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3">
@@ -1343,13 +1243,6 @@
             <element signature="imports" expanded="true" />
             <element signature="e#1704#1713#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ImageHoster/controller/ImageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="218" column="39" selection-start-line="218" selection-start-column="39" selection-end-line="218" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -1374,6 +1267,60 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ImageHoster/controller/ImageControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="312" lean-forward="true" selection-start-line="312" selection-end-line="312" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ImageHoster/controller/UserControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="169" lean-forward="true" selection-start-line="169" selection-end-line="169" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ImageHoster/controller/HomeControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ImageHoster/controller/CommentControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-91">
+          <caret line="45" column="37" lean-forward="true" selection-start-line="45" selection-start-column="37" selection-end-line="45" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ImageHoster/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="66" column="8" selection-start-line="66" selection-start-column="8" selection-end-line="66" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ImageHoster/controller/ImageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="136" lean-forward="true" selection-start-line="136" selection-end-line="136" />
         </state>
       </provider>
     </entry>
