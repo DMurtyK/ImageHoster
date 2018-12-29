@@ -121,14 +121,14 @@ public class ImageController {
         //get the image information using the imageid attribute from the request param and set the id and the user of the image
         Image image = imageService.getImage(imageId);
         image.setId(imageId);
-        image.setUser(image.getUser());
+        image.setUser(user);
         // a string to print the error message
         String editErrorMessage = "Only the owner of the image can edit the image";
         // get the tags information from the image
-        String tags = convertTagsToString(image.getTags());
+       // String tags = convertTagsToString(image.getTags());
         // add the image and tags to the model
         model.addAttribute("image", image);
-        model.addAttribute("tags", tags);
+       // model.addAttribute("tags", tags);
 
         //check if the image user is equal to the user id.If equal then return the edited page images/edit else print the error
         if(image.getUser().getId().equals(user.getId())){
