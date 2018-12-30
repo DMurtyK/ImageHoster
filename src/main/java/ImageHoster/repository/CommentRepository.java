@@ -44,21 +44,25 @@ public class CommentRepository {
         }
         return  newComment;
     }
-
+    //this method gets the comments of the an image using the imageId
     public List<Comment> getImageComments(Integer imageId) {
 
         EntityManager em = emf.createEntityManager();
         EntityTransaction transaction = em.getTransaction();
         try {
             TypedQuery<Comment> query = em.createQuery("SELECT i from Comment i", Comment.class);
-            List<Comment> resultList = query.getResultList();
-            List<Comment> returnList = new ArrayList<Comment>();
-            for(Comment comment : resultList){
+            //commentList will have all the comments of all the images
+            List<Comment> commentList = query.getResultList();
+            List<Comment> resultList = new ArrayList<Comment>();
+            //this for loop selects all the comments whose imageId equals the comment's imageid
+            for(Comment comment : commentList){
                 if(comment.getImage().getId() == imageId){
-                    returnList.add(comment);
+                 //add the comment to the list
+                    resultList.add(comment);
                 }
             }
-            return returnList;
+            // returns the resultList
+            return resultList;
         } catch (NoResultException nre) {
             return null;
         }

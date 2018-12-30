@@ -16,20 +16,15 @@ public class CommentService {
     @Autowired
     private CommentRepository commentRepository;
 
-    public List<Comment> getAllComments(){
 
-
-        return commentRepository.getAllComments();
-
-    }
-
+    //This method gets all the comments of the image with imageId as the parameter and calls the commentRepository
     public List<Comment> getImageComments(Integer imageId) {
         List<Comment> results = commentRepository.getImageComments(imageId);
         return results;
     }
 
 
-
+     //This method creates a new  comment using commentRepository
     public Comment createComment (Comment newComment){
         newComment.setCreatedDate(new Date());
         return commentRepository.createComment(newComment);

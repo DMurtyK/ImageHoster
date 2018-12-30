@@ -24,11 +24,11 @@ public class Comment {
 
     @Column(name = "createdDate")
     private Date createdDate;
-
+    //this column has been added as the foreign key with Many to one mapping as user can have many comments but one comment can have only one user
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id")
     private User user;
-
+    //image_id is a foreign key and with many to one mapping as an image can have many comments but one comment belongs to just image
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "image_id")
     private Image image;

@@ -43,12 +43,12 @@ public class UserController {
     public String registerUser(User user,Model model) {
         //call the method checkPassword(user) and check if it returns true or false
         boolean checkUserPassword = checkPassword(user);
-        String error = "Password must contain at least 1 alphabet, 1 number & 1 special character";
+        String error = "Password must contain atleast 1 alphabet, 1 number & 1 special character";
         //if the checkUserPassword is true then  return "redirect:/users/login" and register the user
         //if it is false then add the model attribute User and passwordTypeError and return users/registration.html
         if(checkUserPassword){
             userService.registerUser(user);
-            return "redirect:/users/login";
+            return "users/login";
         }
         else{
             model.addAttribute("User", user);

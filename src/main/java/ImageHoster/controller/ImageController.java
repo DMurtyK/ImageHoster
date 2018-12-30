@@ -7,6 +7,7 @@ import ImageHoster.model.User;
 import ImageHoster.service.CommentService;
 import ImageHoster.service.ImageService;
 import ImageHoster.service.TagService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -53,27 +54,30 @@ public class ImageController {
 
     // The request mapping has been added with {id}
     @RequestMapping("/images/{id}/{title}")
-    public String showImage(@PathVariable("id") Integer id, Model model,HttpSession session) {
+    public String showImage(@PathVariable("id") Integer id, Model model,HttpSession session) throws Exception {
         //Get the user data from the HttpSession
-        User user = (User) session.getAttribute("loggeduser");
-
+       User user = (User) session.getAttribute("loggeduser");
+        //set the image with setUser and user from the HttpSession
 
         // Get the image using the imageService and id as the parameter
         Image image = imageService.getImage(id);
+        image.setUser(user);
+        image.setId(id);
+
+
+
         //Get the comments "comments" using the commentService and getImageComments(id) method
         List<Comment> comments = commentService.getImageComments(id);
         //now you set the  image with the setComments(comments)
         image.setComments(comments);
-        //set the image with setUser and user from the HttpSession
-        image.setUser(user);
+
 
         //Add the model with all the attributes image,tags and comments
-
         model.addAttribute("image", image);
         model.addAttribute("tags", image.getTags());
         model.addAttribute("comments",image.getComments());
 
-        return "images/image";
+              return "images/image";
     }
 
     //This controller method is called when the request pattern is of type 'images/upload'
@@ -120,30 +124,23 @@ public class ImageController {
         User user = (User) session.getAttribute("loggeduser");
         //get the image information using the imageid attribute from the request param and set the id and the user of the image
         Image image = imageService.getImage(imageId);
-        image.setId(imageId);
-        image.setUser(image.getUser());
-        //Get the comments "comments" using the commentService and getImageComments(id) method
-        List<Comment> comments = commentService.getImageComments(imageId);
-        //now you set the  image with the setComments(comments)
-        image.setComments(comments);
-        // a string to print the error message
-        String editErrorMessage = "Only the owner of the image can edit the image";
-        // get the tags information from the image
-        String tags = convertTagsToString(image.getTags());
         // add the image and tags to the model
         model.addAttribute("image", image);
-        model.addAttribute("tags", tags);
         model.addAttribute("comments",image.getComments());
-
-
+        //convert the tags to strings and add to the module
+        String tags = convertTagsToString(image.getTags());
+        model.addAttribute("tags", tags);
         //check if the image user is equal to the user id.If equal then return the edited page images/edit else print the error
         if(image.getUser().getId().equals(user.getId())){
+
 
             return "images/edit";
         }
         else{
-
+            //print the error message and add the model attribute for editerror and tags
+            String editErrorMessage = "Only the owner of the image can edit the image";
             model.addAttribute("editError",editErrorMessage);
+            model.addAttribute("tags", image.getTags());
             return "images/image.html";
         }
 
@@ -196,6 +193,8 @@ public class ImageController {
         image.setUser(image.getUser());
         String deleteErrorMessage = "Only the owner of the image can delete the image";
         model.addAttribute("image", image);
+        model.addAttribute("tags", image.getTags());
+        model.addAttribute("comments",image.getComments());
 
 
         if(image.getUser().getId().equals(user.getId()))

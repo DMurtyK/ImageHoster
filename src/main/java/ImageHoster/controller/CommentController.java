@@ -33,14 +33,20 @@ public class CommentController {
 
     @RequestMapping(value = "/image/{imageId}/{imageTitle}/comments", method = RequestMethod.POST)
     public String createComment(@PathVariable(value="imageId") Integer imageId,@RequestParam(value="comment") String text, Comment newComment, HttpSession session) {
+       //Get the user from the session
         User user = (User) session.getAttribute("loggeduser");
+        //set the user
         newComment.setUser(user);
+        //Get the image from the imageservice and imageId as the input
         Image image = imageService.getImage(imageId);
+        //set the image
         newComment.setImage(image);
+        //set the date
         newComment.setCreatedDate(new Date());
+        //set the text
         newComment.setText(text);
 
-
+        //create the comment calling the commentService
         commentService.createComment( newComment);
 
         return "redirect:/images/" + image.getId() + "/" + image.getTitle();

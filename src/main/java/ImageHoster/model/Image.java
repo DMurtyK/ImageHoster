@@ -50,7 +50,8 @@ public class Image {
     //Since the mapping is Many to Many, a new table will be generated containing the two columns both referencing to the primary key of both the tables ('images', 'tags')
     @ManyToMany(fetch = FetchType.LAZY)
     private List<Tag> tags = new ArrayList<>();
-
+    // one image can have many comments but one comment can belong to just one image so there ie one to many mapping
+    //comments will have a list of all the comments of the image
     @OneToMany(fetch = FetchType.EAGER)
     private List<Comment> comments = new ArrayList<>();
 
@@ -130,6 +131,7 @@ public class Image {
         this.tags = tags;
     }
 
+
     public List<Comment> getComments() {
         return comments;
     }
@@ -137,4 +139,8 @@ public class Image {
     public void setComments(List<Comment> comments) {
         this.comments = comments;
     }
+
+
+
+
 }
